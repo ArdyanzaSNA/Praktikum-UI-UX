@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dyyxter Shop - Kaos Web Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f7f7f7; font-family: Arial, sans-serif; }
+    header { background: #333; color: #fff; text-align: center; padding: 15px 0; }
+    header a { color: #9cf; text-decoration: underline; }
+    .product-container { max-width: 900px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .thumbnail img { width: 80px; cursor: pointer; border-radius: 5px; margin-right: 10px; transition: 0.3s; }
+    .thumbnail img:hover { transform: scale(1.1); }
+    .main-img img { width: 100%; border-radius: 10px; cursor: pointer; }
+    .price { color: #e53935; font-size: 1.8em; font-weight: bold; }
+    .btn-primary { background: #007bff; border: none; }
+    .btn-danger { background: #e53935; border: none; }
+    .btn-outline-light {
+      color: #000;
+      background-color: #fff;
+      border: 1px solid #ccc;
+    }
+    .btn-outline-light:hover {
+      background-color: #f1f1f1;
+      border-color: #999;
+    }
+    footer { background: #333; color: white; text-align: center; padding: 15px; margin-top: 40px; border-radius: 5px; }
+    .modal-content img { width: 100%; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Dyyxter Shop</h2>
+  <a href="#">kunjungi toko</a>
+</header>
+
+<div class="product-container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="main-img mb-3">
+        <img id="mainImage" src="https://i.imgur.com/Y7W7F3I.jpeg" alt="Kaos Web Developer" data-bs-toggle="modal" data-bs-target="#zoomModal">
+      </div>
+      <div class="thumbnail d-flex">
+        <img src="https://i.imgur.com/Y7W7F3I.jpeg" onclick="changeImage(this)">
+        <img src="https://i.imgur.com/4AiXzf8.jpeg" onclick="changeImage(this)">
+        <img src="https://i.imgur.com/jvYBxzF.jpeg" onclick="changeImage(this)">
+        <img src="https://i.imgur.com/JT0nZkS.jpeg" onclick="changeImage(this)">
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h3>Kaos Web Developer Keren</h3>
+      <p>Oleh: Dyyxter Shop</p>
+      <p class="price">Rp 98.000</p>
+
+      <div class="mb-3">
+        <label><strong>Pilih Ukuran:</strong></label><br>
+        <button class="btn btn-outline-secondary btn-sm">S</button>
+        <button class="btn btn-outline-secondary btn-sm">M</button>
+        <button class="btn btn-outline-secondary btn-sm">L</button>
+        <button class="btn btn-outline-secondary btn-sm">XL</button>
+        <button class="btn btn-outline-secondary btn-sm">XXL</button>
+      </div>
+
+      <div class="mb-3">
+        <label><strong>Pilih Warna:</strong></label><br>
+        <button class="btn btn-outline-dark btn-sm">Hitam</button>
+        <button class="btn btn-outline-light btn-sm">Putih</button>
+        <button class="btn btn-outline-danger btn-sm">Merah</button>
+      </div>
+
+      <div class="mb-3">
+        <label><strong>Jumlah:</strong></label>
+        <input type="number" value="1" min="1" class="form-control" style="width:80px;">
+      </div>
+
+      <button class="btn btn-primary me-2" onclick="addCart()">MASUKKAN KERANJANG</button>
+      <button class="btn btn-danger" onclick="buyNow()">BELI SEKARANG</button>
+
+      <div class="mt-4">
+        <h5>Deskripsi Singkat/Informasi</h5>
+        <p>⭐ Rating (4.8/5)<br>🛍️ Ulasan: 12.978 Pembeli</p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div>
+    <h5>Deskripsi Lengkap Produk</h5>
+    <p>Kaos eksklusif untuk para web developer sejati. Dibuat dengan bahan Cotton Combed yang nyaman dan sablon berkualitas tinggi.</p>
+    <ul>
+      <li>Bahan lembut dan adem.</li>
+      <li>Desain coding unik dan stylish.</li>
+      <li>Tersedia berbagai ukuran dan warna.</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  Hak Cipta © 2025 Ardyanza - STT NF
+</footer>
+
+<!-- Modal Zoom -->
+<div class="modal fade" id="zoomModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <img id="zoomImage" src="">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function changeImage(element) {
+  document.getElementById("mainImage").src = element.src;
+}
+
+function addCart() {
+  alert("Produk berhasil dimasukkan ke keranjang!");
+}
+
+function buyNow() {
+  alert("Terima kasih telah membeli produk ini!");
+}
+
+document.getElementById("mainImage").onclick = function() {
+  document.getElementById("zoomImage").src = this.src;
+};
+</script>
+
+</body>
+</html>

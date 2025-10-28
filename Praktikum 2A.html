@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pizza</title>
+    <style>
+      button {
+        padding: 5px 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #count {
+        width: 60px;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>Black Goose | Pizza-on-Demand</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quaerat! Corporis praesentium veniam laborum qui ipsam omnis ab. Minima illo ea rerum repellat blanditiis quasi modi provident dolore, voluptate magni!</p>
+
+    <form action="" method="post">
+        <table border="0">
+            <thead>
+                <tr>
+                    <th colspan="2">Your Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" name="name" id="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><input type="text" name="address" id="address"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone:</label></td>
+                    <td><input type="text" name="phone" id="phone"></td>
+                </tr>
+                <tr>
+                    <td><label for="instruction">Delivery instruction:</label></td>
+                    <td><textarea name="instruction" id="instruction" cols="21" rows="4"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+      
+        <fieldset>
+            <legend>Design Your Dream Pizza</legend>
+            <h4>Pizza Specs</h4>
+
+            <h4>Crust (Choose One):</h4>
+            <ul style="list-style: none;">
+                <li>
+                    <input type="radio" name="crust" value="cw" id="cw">
+                    <label for="cw">Classic White</label>
+                </li>
+                <li>
+                    <input type="radio" name="crust" value="mg" id="mg">
+                    <label for="mg">Multi Grain</label>
+                </li>
+            </ul>
+
+            <h4>Topping (Choose any):</h4>
+            <ul style="list-style: none;">
+                <li>
+                    <input type="checkbox" name="topping" value="rs" id="rs">
+                    <label for="rs">Red Sauce</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topping" value="mc" id="mc">
+                    <label for="mc">Mozzarella Cheese</label>
+                </li>
+            </ul>
+
+            <h4>Number of Pizza</h4>
+            <button type="button" onclick="decrement()">-</button>
+            <input type="number" name="count" id="count" min="1" value="1" step="1">
+            <button type="button" onclick="increment()">+</button>
+
+            <br><br>
+            <button type="submit">Bring me a pizza 🍕</button>
+            <button type="reset">Cancel</button>
+        </fieldset>
+    </form>
+
+    <script>
+        function increment() {
+            const input = document.getElementById('count');
+            input.value = parseInt(input.value) + 1;
+        }
+
+        function decrement() {
+            const input = document.getElementById('count');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Ardyanza S.N.A</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-10 shadow-lg">
+    <div class="container mx-auto text-center">
+      <!-- Foto Profil -->
+<img src="IMG_20251008_131100.jpg"
+     alt="Foto Profil"
+     onclick="openModal(this.src)"
+     class="mx-auto rounded-full w-32 h-32 border-4 border-white shadow-lg mb-4 hover:scale-105 transition cursor-pointer">
+
+<!-- Popup Modal -->
+<div id="imgModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+  <img id="modalImage" class="max-w-full max-h-full rounded-lg shadow-2xl">
+</div>
+
+<script>
+  function openModal(src) {
+    document.getElementById('modalImage').src = src;
+    document.getElementById('imgModal').classList.remove('hidden');
+  }
+
+  document.getElementById('imgModal').addEventListener('click', function () {
+    this.classList.add('hidden');
+  });
+</script>
+      <h1 class="text-4xl font-bold">Ardyanza S.N.A</h1>
+      <p class="text-lg mt-2">Mahasiswa Teknik Informatika | Web & Game Developer</p>
+      <div class="mt-3 space-x-4">
+        <a href="mailto:ardyanza2124@gmail.com" class="hover:underline">✉️ Email</a>
+        <a href="https://wa.me/6285778402452" target="_blank" class="hover:underline">
+  💬 Chat via WhatsApp
+</a>
+        <a href="https://www.google.com/maps?q=Bogor" target="_blank" class="hover:underline">
+  📍 Alamat
+</a>
+      </div>
+      <a href="#profil" class="mt-5 inline-block bg-white text-blue-600 px-5 py-2 rounded-full font-semibold hover:bg-blue-100 transition">Lihat CV</a>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-5 py-10 space-y-14">
+    <!-- Profil -->
+    <section id="profil" class="bg-white shadow-lg rounded-2xl p-8 hover:shadow-2xl transition">
+      <h2 class="text-2xl font-bold text-blue-600 mb-4">👤 Profil</h2>
+      <p>Saya adalah mahasiswa Teknik Informatika yang antusias dalam pengembangan web, game, dan teknologi modern.
+         Mampu bekerja dalam tim, berpikir kritis, dan cepat belajar hal baru.</p>
+    </section>
+
+    <!-- Pendidikan -->
+    <section id="pendidikan" class="bg-white shadow-lg rounded-2xl p-8 hover:shadow-2xl transition">
+      <h2 class="text-2xl font-bold text-blue-600 mb-4">🎓 Pendidikan</h2>
+      <ul class="space-y-2">
+        <li>
+          <strong>2025 - Sekarang</strong><br>
+          STT Terpadu Nurul Fikri — Teknik Informatika
+        </li>
+        <li>
+          <strong>2022 - 2025</strong><br>
+          SMK BOASH 1 — Desain Komunikasi Visual
+        </li>
+      </ul>
+    </section>
+
+    <!-- Pengalaman -->
+    <section id="pengalaman" class="bg-white shadow-lg rounded-2xl p-8 hover:shadow-2xl transition">
+      <h2 class="text-2xl font-bold text-blue-600 mb-4">💼 Pengalaman</h2>
+      <div class="space-y-3">
+        <div>
+          <h3 class="font-semibold text-lg">Freelancer — Editor Pojoksatu (2024 - Sekarang)</h3>
+          <p>Mengedit berita terkini secara cepat dan sigap.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keahlian -->
+    <section id="skills" class="bg-white shadow-lg rounded-2xl p-8 hover:shadow-2xl transition">
+      <h2 class="text-2xl font-bold text-blue-600 mb-4">🧠 Keahlian</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full font-medium">HTML</span>
+        <span class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full font-medium">CSS</span>
+        <span class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full font-medium">Pyhton</span>
+        <span class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full font-medium">UI/UX Design</span>
+      </div>
+    </section>
+
+    <!-- Sertifikasi -->
+    <section id="sertifikasi" class="bg-white shadow-lg rounded-2xl p-8 hover:shadow-2xl transition">
+      <h2 class="text-2xl font-bold text-blue-600 mb-4">📜 Sertifikasi</h2>
+      <ul class="space-y-2">
+        <li>Dicoding — Front End Developer (2025)</li>
+        <li>Google Digital Garage — Digital Marketing (2024)</li>
+      </ul>
+    </section>
+
+  <footer class="bg-gray-900 text-white text-center py-5 mt-10">
+    © 2025 Ardyanza S.N.A. Dibuat dengan ❤️
+  </footer>
+
+</body>
+</html>
